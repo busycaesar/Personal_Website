@@ -30,14 +30,6 @@ export default function Projects() {
         link="https://github.com/busycaesar/School_Data_Manager"
       />
       <ProjectSection
-        title="School Data Manager"
-        techStack="HTML, CSS, Bootstrap, Node.js, Express.js, Handlebars.js, PostgreSQL, MongoDB"
-        description={[
-          "This is a Webapp which performs CRUD operations on Student’s and Courses’ data along with authentication and authorization functionalities.",
-        ]}
-        link="https://github.com/busycaesar/School_Data_Manager"
-      />
-      <ProjectSection
         title="Pay Slip Scrapper"
         techStack="Node.js, Puppeteer"
         description={[

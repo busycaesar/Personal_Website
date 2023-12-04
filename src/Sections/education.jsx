@@ -7,14 +7,6 @@ export default function Education() {
       <h1>
         <strong>EDUCATION</strong>
       </h1>
-      {/*
-        let program = props.program,
-    dateFrom = props.dateFrom,
-    dateTill = props.dateTill,
-    school = props.school,
-    location = props.location,
-    eduCourses = <p>{props.courses.join(", ")}</p>;
-      */}
       <EduSection
         program="Computer Programming and Analysis (Co-op)"
         progType="Advanced Diploma"
