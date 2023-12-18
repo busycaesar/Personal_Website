@@ -6,7 +6,7 @@ export default function Interests() {
       <h1>
         <strong>INTERESTS</strong>
       </h1>
-      <p>Apart from Web Developer, I like:</p>
+      <p>Apart from Web Development, I like:</p>
       <ul>
         <li>
           Going on long drive with friends while listening favourite songs.

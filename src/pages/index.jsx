@@ -7,7 +7,7 @@ import Interests from "@/Sections/interests";
 
 export default function Home() {
   return (
-    <div className="main-content">
+    <>
       <About />
       <hr />
       <TechSkills />
@@ -19,6 +19,6 @@ export default function Home() {
       <Education />
       <hr />
       <Interests />
-    </div>
+    </>
   );
 }

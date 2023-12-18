@@ -8,7 +8,9 @@ export default function Layout(props) {
       <Col sm={2}>
         <NavBar />
       </Col>
-      <Col sm={10}>{props.children}</Col>
+      <Col sm={10}>
+        <div className="main-content">{props.children}</div>
+      </Col>
     </Row>
   );
 }

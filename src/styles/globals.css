@@ -101,6 +101,11 @@ p {
   text-decoration: underline;
 }
 
+.form-field {
+  width: fit-content;
+  margin: 1em 0;
+}
+
 @media screen and (max-width: 1200px) {
   #profile-photo {
     width: 100px;
