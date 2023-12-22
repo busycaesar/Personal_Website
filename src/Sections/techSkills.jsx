@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import C from "../Photos/c.png";
 import CPP from "../Photos/cpp.png";
 import CSharp from "../Photos/csharp.png";

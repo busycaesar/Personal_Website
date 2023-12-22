@@ -4,15 +4,16 @@ import LinkedinLogo from "../Photos/linkedin.png";
 import GitHubLogo from "../Photos/github.png";
 import GmailLogo from "../Photos/gmail.png";
 import Location from "../Photos/location.png";
+import AboutData from "../Data/about.json";
 
 export default function About() {
   return (
     <div id="about" className="content-section">
       <h1 style={{ fontSize: "4em" }}>
-        <strong>DEV SHAH</strong>
+        <strong>{AboutData[0].name}</strong>
       </h1>
       <h2 style={{ fontSize: "2.5em" }}>
-        <strong>Web Developer</strong>
+        <strong>{AboutData[0].designation}</strong>
       </h2>
       <p>
         <Image
@@ -21,18 +22,9 @@ export default function About() {
           width={20}
           src={Location}
         />
-        Toronto, ON
+        {AboutData[0].location}
       </p>
-      <p>
-        An actively learning and quality-oriented developer, with a keen ability
-        to adapt quickly to new technology, committed to developing optimized,
-        clean, readable, and maintainable code for building a high-quality
-        product having the best user experience. Further, I have experience in
-        communicating with clients, understanding their requirements, delivering
-        the finest as well as accessible solutions. My goal is to learn Full
-        Stack Development along with knowledge in the areas of UI/UX Design and
-        DevOps.
-      </p>
+      <p>{AboutData[0].introduction}</p>
       <div className="social-links">
         <a href="https://www.linkedin.com/in/busycaesar/" target="_blank">
           <Image alt="Link to Dev's LinkedIn" width={70} src={LinkedinLogo} />
