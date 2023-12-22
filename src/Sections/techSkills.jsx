@@ -18,7 +18,9 @@ import GitHub from "../Photos/github.png";
 import VSCode from "../Photos/vscode.png";
 import Postman from "../Photos/postman.png";
 import MSSQL from "../Photos/mssql.png";
+import Figma from "../Photos/figma.png";
 import VisualParadigm from "../Photos/vparadigm.png";
+import MSProject from "../Photos/msproject.png";
 import Discord from "../Photos/discord.png";
 import NPM from "../Photos/npm.png";
 import JWT from "../Photos/jwt.png";
@@ -33,23 +35,23 @@ export default function TechSkills() {
       <TechSkillsSection
         title="Programming Languages"
         techs={[
-          { name: "JavaScript", width: "75", src: JavaScript },
-          { name: "CSharp", width: "65", src: CSharp },
-          { name: "Python", width: "70", src: Python },
-          { name: "HTML", width: "70", src: HTML },
-          { name: "CSS", width: "70", src: CSS },
-          { name: "CPP", width: "70", src: CPP },
-          { name: "C", width: "70", src: C },
+          { name: "JavaScript", width: "50", src: JavaScript },
+          { name: "C#", width: "60", src: CSharp },
+          { name: "Python", width: "55", src: Python },
+          { name: "HTML", width: "50", src: HTML },
+          { name: "CSS", width: "75", src: CSS },
+          { name: "C++", width: "52", src: CPP },
+          { name: "C", width: "53", src: C },
         ]}
       />
       <TechSkillsSection
         title="Libraries, Tools and Frameworks"
         techs={[
-          { name: "Node.js", width: "65", src: NodeJS },
-          { name: "Express.js", width: "65", src: ExpressJS },
-          { name: "Next.js", width: "70", src: NextJS },
+          { name: "Node.js", width: "50", src: NodeJS },
+          { name: "Express.js", width: "60", src: ExpressJS },
+          { name: "Next.js", width: "63", src: NextJS },
           { name: "React.js", width: "60", src: ReactJS },
-          { name: "JWT", width: "70", src: JWT },
+          { name: "JWT", width: "55", src: JWT },
           { name: "Bootstrap", width: "70", src: Bootstrap },
         ]}
       />
@@ -57,25 +59,27 @@ export default function TechSkills() {
         title="Database"
         techs={[
           { name: "MongoDB", width: "70", src: MongoDB },
-          { name: "Postgres SQL", width: "70", src: Postgressql },
+          { name: "PostgreSQL", width: "70", src: Postgressql },
         ]}
       />
       <TechSkillsSection
         title="Version Control System"
         techs={[
-          { name: "Git", width: "70", src: Git },
-          { name: "GitHub", width: "70", src: GitHub },
-          { name: "Node Package Manager", width: "65", src: NPM },
+          { name: "Git", width: "60", src: Git },
+          { name: "GitHub", width: "60", src: GitHub },
+          { name: "Node Package Manager", width: "85", src: NPM },
         ]}
       />
       <TechSkillsSection
         title="Software Application"
         techs={[
-          { name: "VS Code", width: "65", src: VSCode },
-          { name: "Postman", width: "65", src: Postman },
+          { name: "VS Code", width: "50", src: VSCode },
+          { name: "Postman", width: "55", src: Postman },
           { name: "MS SQL Server", width: "70", src: MSSQL },
           { name: "Visual Paradigm", width: "50", src: VisualParadigm },
-          { name: "Discord", width: "65", src: Discord },
+          { name: "Figma", width: "35", src: Figma },
+          { name: "MS Project", width: "50", src: MSProject },
+          { name: "Discord", width: "58", src: Discord },
         ]}
       />
     </div>

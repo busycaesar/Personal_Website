@@ -11,8 +11,7 @@ export default function Interests() {
         <li>
           Going on long drive with friends while listening favourite songs.
         </li>
-        <li>Going on long road trips with family and friends.</li>
-        <li>Exploring and traveling.</li>
+        <li>Exploring various places of the world.</li>
       </ul>
     </div>
   );
