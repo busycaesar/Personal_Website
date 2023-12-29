@@ -27,13 +27,13 @@ export default function About() {
       <p>{AboutData[0].introduction}</p>
       <div className="social-links">
         <a href="https://www.linkedin.com/in/busycaesar/" target="_blank">
-          <Image alt="Link to Dev's LinkedIn" width={50} src={LinkedinLogo} />
+          <Image alt="Link to Dev's LinkedIn" width={45} src={LinkedinLogo} />
         </a>
         <a href="https://github.com/busycaesar" target="_blank">
-          <Image alt="Link to Dev's GitHub" width={53} src={GitHubLogo} />
+          <Image alt="Link to Dev's GitHub" width={50} src={GitHubLogo} />
         </a>
         <a href="mailto:busycaesar@gmail.com" target="_blank">
-          <Image alt="Link to Dev's Email" width={55} src={GmailLogo} />
+          <Image alt="Link to Dev's Email" width={45} src={GmailLogo} />
         </a>
       </div>
     </div>
