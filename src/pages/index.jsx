@@ -19,6 +19,7 @@ export default function Home() {
       <Education />
       <hr />
       <Interests />
+      <p>&copy; Developed with 🖤 by Dev!</p>
     </>
   );
 }
