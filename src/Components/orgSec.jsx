@@ -19,9 +19,7 @@ export default function OrgSec(props) {
           </h2>
         </Col>
         <Col md={4} style={{ textAlign: "right" }}>
-          <p>
-            {dateFrom} - {dateTill}
-          </p>
+          <p>{dateFrom.seconds}</p>
         </Col>
       </Row>
       <Row>
@@ -30,13 +28,17 @@ export default function OrgSec(props) {
         </Col>
         <Col md={4} style={{ textAlign: "right" }}>
           <p>
-            <Image
-              style={{ marginRight: "0.5em" }}
-              alt="Location"
-              width={20}
-              src={Location}
-            />
-            {location}
+            {location && (
+              <>
+                <Image
+                  style={{ marginRight: "0.5em" }}
+                  alt="Location"
+                  width={20}
+                  src={Location}
+                />
+                {location}
+              </>
+            )}
           </p>
         </Col>
       </Row>

@@ -8,7 +8,7 @@ export default function EduSection(props) {
     dateTill = props.dateTill,
     school = props.school,
     location = props.location,
-    eduCourses = <p>{props.courses.join(", ")}</p>;
+    eduCourses = props.courses && <p>{props.courses.join(", ")}</p>;
   return (
     <>
       <OrgSec
