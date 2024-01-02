@@ -19,7 +19,9 @@ export default function OrgSec(props) {
           </h2>
         </Col>
         <Col md={4} style={{ textAlign: "right" }}>
-          <p>{dateFrom.seconds}</p>
+          <p>
+            {dateFrom} - {dateTill}
+          </p>
         </Col>
       </Row>
       <Row>

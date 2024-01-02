@@ -10,7 +10,7 @@ export default function Education() {
     try {
       onSnapshot(collection(db, "education"), (spanshot) => {
         let educationList = spanshot.docs.map((document) => document.data());
-        setEducation(educationList.sort((a, b) => b.startDate - a.startDate));
+        setEducation(educationList.sort((a, b) => b.orderDate - a.orderDate));
       });
     } catch (error) {
       console.log(error);

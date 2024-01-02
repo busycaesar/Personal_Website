@@ -21,7 +21,7 @@ export default function Custom404() {
         allowfullscreen
       ></iframe>
       <Link href="/">
-        <Button style={{ marginTop: "1em" }}>Click Here to go back</Button>
+        <Button style={{ marginTop: "1em" }}>Go Back</Button>
       </Link>
     </div>
   );
