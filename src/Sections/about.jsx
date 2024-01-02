@@ -19,7 +19,7 @@ export default function About() {
       {about.name && (
         <>
           <h1 style={{ fontSize: "4em" }}>
-            <strong>{about.name}</strong>
+            <strong>{about.name.toUpperCase()}</strong>
           </h1>
           <h2 style={{ fontSize: "2.5em" }}>
             <strong>{about.designation}</strong>
