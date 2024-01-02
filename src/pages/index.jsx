@@ -1,9 +1,11 @@
-import TechSkills from "@/Sections/techSkills";
-import About from "@/Sections/about";
-import WorkExperience from "@/Sections/workExperience";
-import Projects from "@/Sections/projects";
-import Education from "@/Sections/education";
-import Interests from "@/Sections/interests";
+import {
+  About,
+  TechSkills,
+  WorkExperience,
+  Projects,
+  Education,
+  Interests,
+} from "@/Sections";
 
 export default function Home() {
   return (
