@@ -13,22 +13,14 @@ import Button from "@mui/material/Button";
 import ProfilePhoto from "../Photos/profile-photo.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
-const drawerWidth = 240,
-  navItems = [
-    "About",
-    "Technical Skills",
-    "Work Experience",
-    "Projects",
-    "Education",
-    "Interests",
-  ];
+const drawerWidth = 240;
 
-export default function DrawerAppBar() {
-  const [mobileOpen, setMobileOpen] = React.useState(false),
-    handleDrawerToggle = () => {
-      setMobileOpen((prevState) => !prevState);
-    },
+export default function DrawerAppBar(props) {
+  const navBarItems = props.navBarItems || [],
+    [mobileOpen, setMobileOpen] = useState(false),
+    handleDrawerToggle = () => setMobileOpen((prevState) => !prevState),
     drawer = (
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
         <Image
@@ -41,7 +33,7 @@ export default function DrawerAppBar() {
         />
         <Divider />
         <List className="nav-bar-hamburger">
-          {navItems.map((item) => (
+          {navBarItems.map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
@@ -79,14 +71,14 @@ export default function DrawerAppBar() {
               alt="Profile Photo"
             />
             <Divider />
-            {navItems.map((item) => (
+            {navBarItems.map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
                 style={{
                   display: "flex",
-                  "align-items": "center",
-                  "justify-content": "center",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <Button

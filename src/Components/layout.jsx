@@ -6,7 +6,16 @@ export default function Layout(props) {
   return (
     <Row>
       <Col sm={2}>
-        <NavBar />
+        <NavBar
+          navBarItems={[
+            "About",
+            "Technical Skills",
+            "Work Experience",
+            "Projects",
+            "Education",
+            "Interests",
+          ]}
+        />
       </Col>
       <Col sm={10}>
         <div className="main-content">{props.children}</div>

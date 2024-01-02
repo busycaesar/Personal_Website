@@ -1,20 +1,14 @@
 import React from "react";
 import EduSection from "@/Components/eduSection";
 import { useEffect, useState } from "react";
-import db from "../Data/about";
-import { onSnapshot, collection } from "firebase/firestore";
+import { EducationData } from "@/Data";
 
 export default function Education() {
   const [education, setEducation] = useState([]);
   useEffect(() => {
-    try {
-      onSnapshot(collection(db, "education"), (spanshot) => {
-        let educationList = spanshot.docs.map((document) => document.data());
-        setEducation(educationList.sort((a, b) => b.orderDate - a.orderDate));
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    EducationData()
+      .then((data) => setEducation(data))
+      .catch((error) => console.log(error));
   });
   return (
     <div id="education" className="content-section">

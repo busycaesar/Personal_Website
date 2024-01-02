@@ -1,29 +1,31 @@
 import React from "react";
-import C from "../Photos/c.png";
-import CPP from "../Photos/cpp.png";
-import CSharp from "../Photos/csharp.png";
-import JavaScript from "../Photos/js.png";
-import Python from "../Photos/python.png";
-import HTML from "../Photos/html.png";
-import CSS from "../Photos/css.png";
-import NodeJS from "../Photos/nodejs.png";
-import ExpressJS from "../Photos/expressjs.png";
-import ReactJS from "../Photos/react.png";
-import NextJS from "../Photos/next.png";
-import Bootstrap from "../Photos/bootstrap.png";
-import MongoDB from "../Photos/mongoDB.png";
-import Postgressql from "../Photos/postgressql.png";
-import Git from "../Photos/git.png";
-import GitHub from "../Photos/github.png";
-import VSCode from "../Photos/vscode.png";
-import Postman from "../Photos/postman.png";
-import MSSQL from "../Photos/mssql.png";
-import Figma from "../Photos/figma.png";
-import VisualParadigm from "../Photos/vparadigm.png";
-import MSProject from "../Photos/msproject.png";
-import Discord from "../Photos/discord.png";
-import NPM from "../Photos/npm.png";
-import JWT from "../Photos/jwt.png";
+import {
+  Bootstrap,
+  C,
+  CPP,
+  CSharp,
+  JavaScript,
+  Python,
+  HTML,
+  CSS,
+  NodeJS,
+  ExpressJS,
+  ReactJS,
+  NextJS,
+  MongoDB,
+  Postgressql,
+  Git,
+  GitHub,
+  VSCode,
+  Postman,
+  MSSQL,
+  Figma,
+  VisualParadigm,
+  MSProject,
+  Discord,
+  NPM,
+  JWT,
+} from "@/Photos";
 import TechSkillsSection from "@/Components/techSkillsSection";
 
 export default function TechSkills() {

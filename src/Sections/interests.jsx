@@ -1,19 +1,13 @@
 import React from "react";
-import db from "../Data/about";
-import { onSnapshot, collection } from "firebase/firestore";
 import { useState, useEffect } from "react";
+import { InterestData } from "@/Data";
 
 export default function Interests() {
   const [interests, setInterests] = useState([]);
   useEffect(() => {
-    try {
-      onSnapshot(collection(db, "interests"), (spanshot) => {
-        let interestList = spanshot.docs.map((document) => document.data());
-        setInterests(interestList[0].interest);
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    InterestData()
+      .then((data) => setInterests(data))
+      .catch((error) => console.log(error));
   });
   return (
     <div id="interests" className="content-section">

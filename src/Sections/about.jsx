@@ -4,24 +4,19 @@ import LinkedinLogo from "../Photos/linkedin.png";
 import GitHubLogo from "../Photos/github.png";
 import GmailLogo from "../Photos/gmail.png";
 import Location from "../Photos/location.png";
-import db from "../Data/about";
 import { useState, useEffect } from "react";
-import { collection, onSnapshot } from "firebase/firestore";
+import { AboutData } from "@/Data";
 
 export default function About() {
   const [about, setAbout] = useState([]);
   useEffect(() => {
-    try {
-      onSnapshot(collection(db, "about"), (spanshot) => {
-        setAbout(spanshot.docs.map((document) => document.data())[0]);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  });
+    AboutData()
+      .then((data) => setAbout(data))
+      .catch((error) => console.log(error));
+  }, [about]);
   return (
     <div id="about" className="content-section">
-      {about && (
+      {about.name && (
         <>
           <h1 style={{ fontSize: "4em" }}>
             <strong>{about.name}</strong>
