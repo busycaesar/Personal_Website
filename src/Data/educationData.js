@@ -1,17 +1,9 @@
-import db from "./firebase";
-import { collection, onSnapshot } from "firebase/firestore";
+import getCollectionData from "./getCollection";
 
 const importEducationData = () => {
-  return new Promise((resolve, reject) => {
-    try {
-      onSnapshot(collection(db, "education"), (spanshot) => {
-        let educationList = spanshot.docs.map((document) => document.data());
-        resolve(educationList.sort((a, b) => b.orderDate - a.orderDate));
-      });
-    } catch (error) {
-      reject(error);
-    }
-  });
+  return getCollectionData("education")
+    .then((data) => data.sort((a, b) => b.orderDate - a.orderDate))
+    .catch((error) => console.log(error));
 };
 
 export default importEducationData;

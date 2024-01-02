@@ -1,16 +1,9 @@
-import db from "../Data/firebase";
-import { collection, onSnapshot } from "firebase/firestore";
+import getCollectionData from "./getCollection";
 
 const importAboutData = () => {
-  return new Promise((resolve, reject) => {
-    try {
-      onSnapshot(collection(db, "about"), (spanshot) => {
-        resolve(spanshot.docs.map((document) => document.data())[0]);
-      });
-    } catch (error) {
-      reject(error);
-    }
-  });
+  return getCollectionData("about")
+    .then((data) => data[0])
+    .catch((error) => console.log(error));
 };
 
 export default importAboutData;
