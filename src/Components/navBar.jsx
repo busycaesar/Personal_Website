@@ -14,6 +14,7 @@ import ProfilePhoto from "../Photos/profile-photo.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import BuyMeACoffee from "./buyMeACoffee";
 
 const drawerWidth = 240;
 
@@ -46,6 +47,7 @@ export default function DrawerAppBar(props) {
             </Link>
           ))}
         </List>
+        <BuyMeACoffee />
       </Box>
     );
 
@@ -91,6 +93,7 @@ export default function DrawerAppBar(props) {
                 </Button>
               </Link>
             ))}
+            <BuyMeACoffee />
           </div>
         </Toolbar>
       </div>
