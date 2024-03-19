@@ -1,9 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React from "react";
-import LinkedinLogo from "../Photos/linkedin.png";
-import GitHubLogo from "../Photos/github.png";
-import GmailLogo from "../Photos/gmail.png";
 import Location from "../Photos/location.png";
 import { useState, useEffect } from "react";
 import { AboutData } from "@/Data";
@@ -23,6 +20,7 @@ export default function About() {
       .then((data) => setAbout(data))
       .catch((error) => console.log(error));
   }, [about]);
+
   return (
     <div id="about" className="content-section">
       {about.name && (
@@ -53,7 +51,7 @@ export default function About() {
                 style={{ marginRight: "0.5em" }}
               >
                 <img
-                  src={`https://skillicons.dev/icons?i=${key}`}
+                  src={`https://skillicons.dev/icons?i=${key}&theme=light`}
                   alt={`Link to Dev's ${key}`}
                 />
               </a>
