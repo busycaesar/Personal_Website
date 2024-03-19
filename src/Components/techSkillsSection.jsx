@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
 
 export default function TechSkillsSection(props) {
   let title = props.title,
@@ -10,9 +10,13 @@ export default function TechSkillsSection(props) {
         <strong>{title}:</strong>
       </h2>
       <div className="social-links">
-        {techs.map((tech, index) => (
-          <div key={index} className="tech-logo">
-            <Image src={tech.src} width={tech.width} alt={tech.name} />
+        {techs.map((tech) => (
+          <div key={tech} className="tech-logo">
+            <img
+              src={`https://skillicons.dev/icons?i=${tech.src}&theme=light`}
+              alt={tech.name}
+              style={{ marginBottom: "0.15em" }}
+            />
             <div className="tech-logo-name">{tech.name}</div>
           </div>
         ))}
