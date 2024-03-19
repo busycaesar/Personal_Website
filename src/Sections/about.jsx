@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React from "react";
 import LinkedinLogo from "../Photos/linkedin.png";
@@ -9,6 +10,14 @@ import { AboutData } from "@/Data";
 
 export default function About() {
   const [about, setAbout] = useState([]);
+
+  const SocialMediaAccounts = {
+    linkedin: "https://www.linkedin.com/in/busycaesar/",
+    github: "https://github.com/busycaesar",
+    devto: "https://dev.to/busycaesar",
+    gmail: "mailto:busycaesar@gmail.com",
+  };
+
   useEffect(() => {
     AboutData()
       .then((data) => setAbout(data))
@@ -34,7 +43,25 @@ export default function About() {
             {about.location}
           </p>
           <p>{about.introduction}</p>
-          <div className="social-links">
+
+          <div style={{ margin: "1em 0" }}>
+            {Object.entries(SocialMediaAccounts).map(([key, value]) => (
+              <a
+                key={key}
+                href={value}
+                target="_blank"
+                style={{ marginRight: "0.5em" }}
+              >
+                <img
+                  src={`https://skillicons.dev/icons?i=${key}`}
+                  alt={`Link to Dev's ${key}`}
+                />
+              </a>
+            ))}
+          </div>
+
+          {/* <div className="social-links">
+            
             <a href="https://www.linkedin.com/in/busycaesar/" target="_blank">
               <Image
                 alt="Link to Dev's LinkedIn"
@@ -48,7 +75,7 @@ export default function About() {
             <a href="mailto:busycaesar@gmail.com" target="_blank">
               <Image alt="Link to Dev's Email" width={45} src={GmailLogo} />
             </a>
-          </div>
+          </div> */}
         </>
       )}
     </div>
