@@ -141,6 +141,7 @@ p {
   }
   .main-content {
     margin: 2em 1.5em;
+    padding-top: 3em;
   }
   .content-section {
     padding: 5em 0;
