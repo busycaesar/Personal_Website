@@ -1,3 +1,4 @@
+import BuyMeACoffee from "@/Components/buyMeACoffee";
 import {
   About,
   TechSkills,
@@ -21,7 +22,12 @@ export default function Home() {
       <Education />
       <hr />
       <Interests />
-      <p>&copy; Developed with 🖤 by Dev!</p>
+      <p className="flex items-center">
+        &copy; Developed with 🖤 by Dev!
+        <span className="mx-3">
+          <BuyMeACoffee />
+        </span>
+      </p>
     </>
   );
 }

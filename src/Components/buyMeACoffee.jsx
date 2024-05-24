@@ -5,7 +5,6 @@ export default function BuyMeACoffee() {
     <>
       <a href="https://www.buymeacoffee.com/busycaesar7" target="_blank">
         <Image
-          style={{ marginTop: "3em" }}
           src="https://cdn.buymeacoffee.com/buttons/default-black.png"
           alt="Buy Me A Coffee"
           height={41}

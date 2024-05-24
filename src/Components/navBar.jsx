@@ -14,7 +14,6 @@ import ProfilePhoto from "../Photos/profile-photo.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import BuyMeACoffee from "./buyMeACoffee";
 
 const drawerWidth = 240;
 
@@ -24,15 +23,20 @@ export default function DrawerAppBar(props) {
     [urlRoot, setUrlState] = useState(null),
     handleDrawerToggle = () => setMobileOpen((prevState) => !prevState),
     drawer = urlRoot && (
-      <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-        <Image
-          src={ProfilePhoto}
-          width={150}
-          height={150}
-          id="profile-photo"
-          alt="Profile Photo"
-          style={{ marginTop: "3em" }}
-        />
+      <Box
+        onClick={handleDrawerToggle}
+        sx={{ textAlign: "center" }}
+        className="mt-[5em]"
+      >
+        <div className="flex flex-col items-center">
+          <Image
+            src={ProfilePhoto}
+            width={150}
+            height={150}
+            id="profile-photo"
+            alt="Profile Photo"
+          />
+        </div>
         <Divider />
         <List className="nav-bar-hamburger">
           {navBarItems.map((item) => (
@@ -48,7 +52,6 @@ export default function DrawerAppBar(props) {
             </Link>
           ))}
         </List>
-        <BuyMeACoffee />
       </Box>
     );
 
@@ -69,7 +72,7 @@ export default function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <div className="nav-bar-vertical">
+          <div className="nav-bar-vertical flex flex-col items-center">
             <Image
               src={ProfilePhoto}
               width={175}
@@ -98,7 +101,6 @@ export default function DrawerAppBar(props) {
                 </Button>
               </Link>
             ))}
-            <BuyMeACoffee />
           </div>
         </Toolbar>
       </div>
