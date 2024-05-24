@@ -15,7 +15,9 @@ export default function WorkExpSection(props) {
         {responsibilities.length > 0 ? (
           <ul>
             {responsibilities.map((res, index) => (
-              <li key={index}>{res}</li>
+              <li className="list-disc" key={index}>
+                {res}
+              </li>
             ))}
           </ul>
         ) : null}

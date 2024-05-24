@@ -1,7 +1,5 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import Location from "../Photos/location.png";
-import Image from "next/image";
 
 export default function OrgSec(props) {
   let designation = props.designation,
@@ -29,19 +27,7 @@ export default function OrgSec(props) {
           <p>{organization}</p>
         </Col>
         <Col md={4} style={{ textAlign: "right" }}>
-          <p>
-            {location && (
-              <>
-                <Image
-                  style={{ marginRight: "0.5em" }}
-                  alt="Location"
-                  width={20}
-                  src={Location}
-                />
-                {location}
-              </>
-            )}
-          </p>
+          <p>{location && <>{location}</>}</p>
         </Col>
       </Row>
       {additionalContent}
