@@ -8,10 +8,7 @@ export default function Blogs() {
   const [blogs, setBlogs] = useState();
   useEffect(() => {
     getBlogs()
-      .then((data) => {
-        console.log(data[0]);
-        setBlogs(data);
-      })
+      .then((data) => setBlogs(data))
       .catch((error) => console.log(error));
   }, []);
   return (
