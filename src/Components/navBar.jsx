@@ -13,7 +13,7 @@ import Button from "@mui/material/Button";
 import ProfilePhoto from "../Photos/profile-photo.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BuyMeACoffee from "./buyMeACoffee";
 
 const drawerWidth = 240;
@@ -21,8 +21,9 @@ const drawerWidth = 240;
 export default function DrawerAppBar(props) {
   const navBarItems = props.navBarItems || [],
     [mobileOpen, setMobileOpen] = useState(false),
+    [urlRoot, setUrlState] = useState(null),
     handleDrawerToggle = () => setMobileOpen((prevState) => !prevState),
-    drawer = (
+    drawer = urlRoot && (
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
         <Image
           src={ProfilePhoto}
@@ -37,7 +38,7 @@ export default function DrawerAppBar(props) {
           {navBarItems.map((item) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`${urlRoot}/#${item.toLowerCase().replace(/\s+/g, "-")}`}
             >
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: "center" }}>
@@ -50,6 +51,10 @@ export default function DrawerAppBar(props) {
         <BuyMeACoffee />
       </Box>
     );
+
+  useEffect(() => {
+    setUrlState(window.location.origin);
+  }, []);
 
   return (
     <Box className="nav-bar" sx={{ display: "flex", textAlign: "center" }}>
@@ -76,7 +81,7 @@ export default function DrawerAppBar(props) {
             {navBarItems.map((item) => (
               <Link
                 key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                href={`${urlRoot}/#${item.toLowerCase().replace(/\s+/g, "-")}`}
                 style={{
                   display: "flex",
                   alignItems: "center",
