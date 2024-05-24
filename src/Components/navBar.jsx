@@ -13,31 +13,36 @@ import Button from "@mui/material/Button";
 import ProfilePhoto from "../Photos/profile-photo.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import BuyMeACoffee from "./buyMeACoffee";
+import { useState, useEffect } from "react";
 
 const drawerWidth = 240;
 
 export default function DrawerAppBar(props) {
   const navBarItems = props.navBarItems || [],
     [mobileOpen, setMobileOpen] = useState(false),
+    [urlRoot, setUrlState] = useState(null),
     handleDrawerToggle = () => setMobileOpen((prevState) => !prevState),
-    drawer = (
-      <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-        <Image
-          src={ProfilePhoto}
-          width={150}
-          height={150}
-          id="profile-photo"
-          alt="Profile Photo"
-          style={{ marginTop: "3em" }}
-        />
+    drawer = urlRoot && (
+      <Box
+        onClick={handleDrawerToggle}
+        sx={{ textAlign: "center" }}
+        className="mt-[5em]"
+      >
+        <div className="flex flex-col items-center">
+          <Image
+            src={ProfilePhoto}
+            width={150}
+            height={150}
+            id="profile-photo"
+            alt="Profile Photo"
+          />
+        </div>
         <Divider />
         <List className="nav-bar-hamburger">
           {navBarItems.map((item) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`${urlRoot}/#${item.toLowerCase().replace(/\s+/g, "-")}`}
             >
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: "center" }}>
@@ -47,9 +52,12 @@ export default function DrawerAppBar(props) {
             </Link>
           ))}
         </List>
-        <BuyMeACoffee />
       </Box>
     );
+
+  useEffect(() => {
+    setUrlState(window.location.origin);
+  }, []);
 
   return (
     <Box className="nav-bar" sx={{ display: "flex", textAlign: "center" }}>
@@ -64,7 +72,7 @@ export default function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <div className="nav-bar-vertical">
+          <div className="nav-bar-vertical flex flex-col items-center">
             <Image
               src={ProfilePhoto}
               width={175}
@@ -76,7 +84,7 @@ export default function DrawerAppBar(props) {
             {navBarItems.map((item) => (
               <Link
                 key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                href={`${urlRoot}/#${item.toLowerCase().replace(/\s+/g, "-")}`}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -93,7 +101,6 @@ export default function DrawerAppBar(props) {
                 </Button>
               </Link>
             ))}
-            <BuyMeACoffee />
           </div>
         </Toolbar>
       </div>

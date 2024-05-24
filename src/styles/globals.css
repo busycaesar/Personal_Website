@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   overflow-x: hidden;
   background-color: #f1f2ee !important;
@@ -141,6 +145,7 @@ p {
   }
   .main-content {
     margin: 2em 1.5em;
+    padding-top: 3em;
   }
   .content-section {
     padding: 5em 0;

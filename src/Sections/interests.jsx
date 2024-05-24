@@ -17,7 +17,9 @@ export default function Interests() {
       <p>Apart from Web Development, I like:</p>
       <ul>
         {interests.map((interest, index) => (
-          <li key={index}>{interest}</li>
+          <li className="list-disc" key={index}>
+            {interest}
+          </li>
         ))}
       </ul>
     </div>
