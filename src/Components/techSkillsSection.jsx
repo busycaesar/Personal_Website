@@ -13,7 +13,7 @@ export default function TechSkillsSection(props) {
         {techs.map((tech) => (
           <div key={tech} className="tech-logo">
             <img
-              src={`https://skillicons.dev/icons?i=${tech.src}&theme=light`}
+              src={`https://skillicons.dev/icons?i=${tech.src}`}
               alt={tech.name}
               style={{ marginBottom: "0.15em" }}
             />

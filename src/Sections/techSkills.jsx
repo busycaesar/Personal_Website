@@ -12,24 +12,27 @@ export default function TechSkills() {
         title="Languages"
         techs={[
           { name: "JavaScript", src: "js" },
+          { name: "TypeScript", src: "ts" },
           { name: "C#", src: "cs" },
-          { name: "Python", src: "python" },
-          { name: "HTML", src: "html" },
-          { name: "CSS", src: "css" },
+          { name: "Python", src: "py" },
+          { name: "Bash", src: "bash" },
+          { name: "Java", src: "java" },
           { name: "C++", src: "cpp" },
           { name: "C", src: "c" },
+          { name: "HTML", src: "html" },
+          { name: "Markdown", src: "md" },
+          { name: "CSS", src: "css" },
         ]}
       />
       <TechSkillsSection
         title="Technologies"
         techs={[
-          { name: "Node.js", src: "nodejs" },
-          { name: "Express.js", src: "expressjs" },
           { name: "React.js", src: "react" },
           { name: "Next.js", src: "nextjs" },
           { name: "Vite", src: "vite" },
-          { name: "Docker", src: "docker" },
-          { name: "Jest", src: "jest" },
+          { name: "Node.js", src: "nodejs" },
+          { name: "Express.js", src: "express" },
+          { name: "Nest.js", src: "nestjs" },
           { name: "Tailwindcss", src: "tailwindcss" },
           { name: "Bootstrap", src: "bootstrap" },
           { name: "MaterialUI", src: "materialui" },
@@ -40,7 +43,17 @@ export default function TechSkills() {
         techs={[
           { name: "MongoDB", src: "mongodb" },
           { name: "PostGres", src: "postgres" },
+          { name: "SQLite", src: "sqlite" },
+          { name: "Redis", src: "redis" },
           { name: "Firebase", src: "firebase" },
+        ]}
+      />
+      <TechSkillsSection
+        title="CI/CD"
+        techs={[
+          { name: "Jest", src: "jest" },
+          { name: "GitHub Actions", src: "githubactions" },
+          { name: "Docker", src: "docker" },
         ]}
       />
       <TechSkillsSection
@@ -48,36 +61,44 @@ export default function TechSkills() {
         techs={[
           { name: "Git", src: "git" },
           { name: "GitHub", src: "github" },
-          { name: "GitHub Actions", src: "githubactions" },
           { name: "Node Package Manager", src: "npm" },
-        ]}
-      />
-      <TechSkillsSection
-        title="Software Application"
-        techs={[
-          { name: "VS Code", src: "vscode" },
-          { name: "VS Community", src: "visualstudio" },
-          { name: "Eclipse", src: "eclipse" },
-          { name: "Postman", src: "postman" },
-          { name: "Vercel", src: "vercel" },
-          { name: "Figma", src: "figma" },
-          { name: "Discord", src: "discord" },
         ]}
       />
       <TechSkillsSection
         title="Operating Systems"
         techs={[
           { name: "Linux", src: "linux" },
+          { name: "Ubuntu", src: "ubuntu" },
           { name: "Windows", src: "windows" },
+        ]}
+      />
+      <TechSkillsSection
+        title="Code Editors / IDEs"
+        techs={[
+          { name: "vim", src: "vim" },
+          { name: "VS Code", src: "vscode" },
+          { name: "Visual Studio", src: "visualstudio" },
+          { name: "IntelliJ", src: "idea" },
+          { name: "Eclipse", src: "eclipse" },
+        ]}
+      />
+      <TechSkillsSection
+        title="Applications"
+        techs={[
+          { name: "Postman", src: "postman" },
+          { name: "Vercel", src: "vercel" },
+          { name: "Figma", src: "figma" },
+          { name: "Adobe Premiere Pro", src: "pr" },
+          { name: "Discord", src: "discord" },
+          { name: "Notion", src: "notion" },
+          { name: "Obsidian", src: "obsidian" },
         ]}
       />
       <TechSkillsSection
         title="Currently Learning"
         techs={[
-          { name: "BASH", src: "bash" },
-          { name: "VIM", src: "vim" },
           { name: "AWS", src: "aws" },
-          { name: "Java", src: "java" },
+          { name: "Azure", src: "azure" },
         ]}
       />
     </div>
