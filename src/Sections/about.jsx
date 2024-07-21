@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { AboutData } from "@/Data";
 import Link from "next/link";
-import { Button } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
 
 export default function About() {
   const [about, setAbout] = useState([]);
@@ -10,8 +10,8 @@ export default function About() {
   const SocialMediaAccounts = {
     linkedin: "https://www.linkedin.com/in/busycaesar/",
     github: "https://github.com/busycaesar",
-    //devto: "https://dev.to/busycaesar",
-    gmail: "mailto:busycaesar@gmail.com",
+    devto: "https://dev.to/busycaesar",
+    gmail: "mailto:dev-jshah@outlook.com",
   };
 
   useEffect(() => {
@@ -43,11 +43,22 @@ export default function About() {
               </a>
             ))}
           </div>
-          <Link href="/blogs">
-            <Button variant="dark" className="!text-xl my-2">
-              Blogs
-            </Button>
-          </Link>
+          <Row className="w-fit">
+            <Col>
+              <Link href="/blogs">
+                <Button variant="dark" className="!text-xl my-2">
+                  Blogs
+                </Button>
+              </Link>
+            </Col>
+            <Col>
+              <Link href="https://www.youtube.com/@_devshah" target="_blank">
+                <Button variant="dark" className="!text-xl my-2">
+                  Videos
+                </Button>
+              </Link>
+            </Col>
+          </Row>
         </>
       )}
     </div>
