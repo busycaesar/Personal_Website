@@ -28,12 +28,12 @@ export default function About() {
           <Row className="text-center flex items-center">
             <iframe
               src="https://www.openstreetmap.org/export/embed.html?bbox=-79.87747192382814%2C42.86690595775125%2C-79.21829223632814%2C44.55622782328973&amp;layer=mapnik"
-              className="shadow-2xl rounded-[2em] m-2 p-0 md:!w-40 md:h-40 !w-44 h-44 border-1 border-gray-300"
+              className="shadow-2xl rounded-[2em] m-2 p-0 md:!w-40 md:h-40 !w-36 h-36 border-1 border-gray-300"
             ></iframe>
             <Col
               md={3}
               sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-44 h-44 flex flex-col justify-center border-1 border-gray-300"
+              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
             >
               <Link href="#contact">
                 <h3>Contact</h3>
@@ -42,7 +42,7 @@ export default function About() {
             <Col
               md={3}
               sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-44 h-44 flex flex-col justify-center border-1 border-gray-300"
+              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
             >
               <Link href="/blogs">
                 <h3>Blogs</h3>
@@ -51,7 +51,7 @@ export default function About() {
             <Col
               md={3}
               sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-44 h-44 flex flex-col justify-center border-1 border-gray-300"
+              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
             >
               <Link href="https://www.youtube.com/@_devshah" target="_blank">
                 <h3>Tech Videos</h3>

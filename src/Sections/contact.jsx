@@ -28,7 +28,7 @@ export default function Contact() {
               lg={3}
               md={4}
               sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-48 md:h-48 !w-44 h-44 border-1 border-gray-300"
+              className="shadow-2xl rounded-[2em] m-2 md:p-4 p-3 md:!w-48 md:h-48 !w-[9em] !h-[9em] border-1 border-gray-300"
             >
               <a
                 href={link}
@@ -40,7 +40,7 @@ export default function Contact() {
                   alt={`Link to Dev's ${url.hostname}`}
                   className="h-10 w-10 rounded-full"
                 />
-                <div className="md:text-lg text-md my-3 break-words w-full">
+                <div className="md:text-lg sm:text-md text-sm my-3 break-words w-full">
                   {url.hostname}
                   <br />@{username[username.length - 1]}
                 </div>
