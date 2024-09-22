@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Dev Shah&apos;s Website</title>
+        <title>Dev &apos;s Website</title>
       </Head>
       <Layout>
         <Component {...pageProps} />
