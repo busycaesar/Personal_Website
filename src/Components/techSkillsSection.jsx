@@ -11,11 +11,11 @@ export default function TechSkillsSection(props) {
       </h2>
       <div className="social-links">
         {techs.map((tech) => (
-          <div key={tech} className="tech-logo">
+          <div key={tech} className="tech-logo my-1">
             <img
               src={`https://skillicons.dev/icons?i=${tech.src}`}
               alt={tech.name}
-              style={{ marginBottom: "0.15em" }}
+              className="mb-1 h-14 w-14"
             />
             <div className="tech-logo-name">{tech.name}</div>
           </div>
