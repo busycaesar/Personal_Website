@@ -8,9 +8,8 @@ export default function Contact() {
     "https://x.com/busycaesar",
     "https://github.com/busycaesar",
     "https://dev.to/busycaesar",
+    "https://youtube.com/@busycaesar7",
     "https://instagram.com/busycaesar",
-    "https://buymeacoffee.com/busycaesar7",
-    "https://youtube.com/@_devshah",
   ];
 
   return (
@@ -42,7 +41,7 @@ export default function Contact() {
                 />
                 <div className="md:text-lg sm:text-md text-sm my-3 break-words w-full">
                   {url.hostname}
-                  <br />@{username[username.length - 1]}
+                  <br />/{username[username.length - 1]}
                 </div>
               </a>
             </Col>

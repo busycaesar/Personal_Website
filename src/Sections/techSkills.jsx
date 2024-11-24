@@ -11,11 +11,14 @@ export default function TechSkills() {
       <TechSkillsSection
         title="Languages"
         techs={[
+          { name: "Python", src: "py" },
           { name: "JavaScript", src: "js" },
           { name: "TypeScript", src: "ts" },
           { name: "C#", src: "cs" },
-          { name: "Python", src: "py" },
           { name: "Java", src: "java" },
+          { name: "Bash", src: "bash" },
+          { name: "C++", src: "cpp" },
+          { name: "C", src: "c" },
           { name: "HTML", src: "html" },
           { name: "CSS", src: "css" },
         ]}
@@ -25,9 +28,14 @@ export default function TechSkills() {
         techs={[
           { name: "React.js", src: "react" },
           { name: "Next.js", src: "nextjs" },
+          { name: "Vite", src: "vite" },
+          { name: "Angular", src: "angular" },
+          { name: "Flutter", src: "flutter" },
+          { name: "Flask", src: "flask" },
           { name: "Node.js", src: "nodejs" },
           { name: "Express.js", src: "express" },
           { name: "Nest.js", src: "nestjs" },
+          { name: "Deno", src: "deno" },
         ]}
       />
       <TechSkillsSection
