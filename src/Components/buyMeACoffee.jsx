@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function BuyMeACoffee() {
   return (
     <>
-      <a href="https://www.buymeacoffee.com/busycaesar7" target="_blank">
+      <a href="https://www.buymeacoffee.com/busycaesar" target="_blank">
         <Image
           src="https://cdn.buymeacoffee.com/buttons/default-black.png"
           alt="Buy Me A Coffee"

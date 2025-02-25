@@ -8,7 +8,7 @@ export default function Contact() {
     "https://x.com/busycaesar",
     "https://github.com/busycaesar",
     "https://dev.to/busycaesar",
-    "https://youtube.com/@busycaesar7",
+    "https://youtube.com/@busycaesar",
     "https://instagram.com/busycaesar",
   ];
 
