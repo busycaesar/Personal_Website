@@ -3,3 +3,4 @@ export { default as WorkExperienceData } from "./workExperience";
 export { default as ProjectData } from "./projectData";
 export { default as EducationData } from "./educationData";
 export { default as InterestData } from "./interestData";
+export { default as GenerateResponse } from "./devBot";
