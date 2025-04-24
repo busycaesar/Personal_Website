@@ -28,6 +28,17 @@ export default function DevBot() {
       <h1>
         <strong>Welcome to Devbot!</strong>
       </h1>
+      <p className="my-3">
+        DevBot is an AI-powered chatbot designed to answer any questions you
+        have about my work experience, projects, education, and more. It
+        leverages Google's Gemini API for intelligent, real-time responses, and
+        data is stored in pgVector to ensure accurate, context-aware answers
+        based on the content of my portfolio.
+      </p>
+      <p className="my-3">
+        Ask DevBot questions like "Where does Dev works at?", "What did Dev
+        studied?", "What are Dev's featured projects?", etc.
+      </p>
 
       <Row>
         <Col sm={10} className="mb-3 mb-sm-0">
