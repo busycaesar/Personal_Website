@@ -42,7 +42,7 @@ export default function DrawerAppBar(props) {
           <Link href={`${urlRoot}/devbot`}>
             <ListItem disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary="DevBot" />
+                <ListItemText primary={"DevBot"} />
               </ListItemButton>
             </ListItem>
           </Link>
