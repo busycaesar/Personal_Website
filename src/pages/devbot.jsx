@@ -31,13 +31,13 @@ export default function DevBot() {
       <p className="my-3">
         DevBot is an AI-powered chatbot designed to answer any questions you
         have about my work experience, projects, education, and more. It
-        leverages Google's Gemini API for intelligent, real-time responses, and
-        data is stored in pgVector to ensure accurate, context-aware answers
+        leverages Google&apos;s Gemini API for intelligent, real-time responses,
+        and data is stored in pgVector to ensure accurate, context-aware answers
         based on the content of my portfolio.
       </p>
       <p className="my-3">
         Ask DevBot questions like &quot;Where does Dev works at?&quot;,
-        &quot;What did Dev studied?&quot;, &quot;What are Dev's featured
+        &quot;What did Dev studied?&quot;, &quot;What are Dev&apos;s featured
         projects?&quot;, etc.
       </p>
 
