@@ -36,8 +36,9 @@ export default function DevBot() {
         based on the content of my portfolio.
       </p>
       <p className="my-3">
-        Ask DevBot questions like "Where does Dev works at?", "What did Dev
-        studied?", "What are Dev's featured projects?", etc.
+        Ask DevBot questions like &quot;Where does Dev works at?&quot;,
+        &quot;What did Dev studied?&quot;, &quot;What are Dev's featured
+        projects?&quot;, etc.
       </p>
 
       <Row>
