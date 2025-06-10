@@ -61,6 +61,18 @@ export default function About() {
                 <h3>Tech Videos</h3>
               </Link>
             </Col>
+            <Col
+              md={3}
+              sm={6}
+              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
+            >
+              <Link
+                href="https://github.com/busycaesar/Public_Speaking_Portfolio"
+                target="_blank"
+              >
+                <h3>Public Speaking</h3>
+              </Link>
+            </Col>
           </Row>
         </>
       )}
