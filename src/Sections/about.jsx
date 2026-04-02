@@ -28,51 +28,50 @@ export default function About() {
           <Row className="text-center flex items-center">
             <iframe
               src="https://www.openstreetmap.org/export/embed.html?bbox=-79.87747192382814%2C42.86690595775125%2C-79.21829223632814%2C44.55622782328973&amp;layer=mapnik"
-              className="shadow-2xl rounded-[2em] m-2 p-0 md:!w-40 md:h-40 !w-36 h-36 border-1 border-gray-300"
+              style={{
+                borderRadius: "14px",
+                boxShadow: "0 2px 12px rgba(27,42,65,0.07)",
+                borderLeft: "4px solid #1b2a41",
+                margin: "0.5em",
+                width: "160px",
+                height: "160px",
+                border: "none",
+                borderLeft: "4px solid #1b2a41",
+              }}
             ></iframe>
-            <Col
-              md={3}
-              sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
-            >
-              <Link href="#contact">
-                <h3>Contact</h3>
-              </Link>
-            </Col>
-            <Col
-              md={3}
-              sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
-            >
-              <Link
-                href="https://dev.to/busycaesar"
-                target="_blank"
-                rel="noopener noreferrer"
+            {[
+              { label: "Contact", href: "#contact", internal: true },
+              { label: "Blogs", href: "https://dev.to/busycaesar", internal: false },
+              { label: "Tech Videos", href: "https://www.youtube.com/@busycaesar", internal: false },
+              { label: "Public Speaking", href: "/speaking", internal: true },
+            ].map(({ label, href, internal }) => (
+              <Col
+                key={label}
+                md={3}
+                sm={6}
+                style={{
+                  background: "#ffffff",
+                  borderRadius: "14px",
+                  boxShadow: "0 2px 12px rgba(27,42,65,0.07)",
+                  borderLeft: "4px solid #1b2a41",
+                  margin: "0.5em",
+                  width: "160px",
+                  height: "160px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
-                <h3>Blogs</h3>
-              </Link>
-            </Col>
-            <Col
-              md={3}
-              sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
-            >
-              <Link href="https://www.youtube.com/@busycaesar" target="_blank">
-                <h3>Tech Videos</h3>
-              </Link>
-            </Col>
-            <Col
-              md={3}
-              sm={6}
-              className="shadow-2xl rounded-[2em] m-2 p-4 md:!w-40 md:h-40 !w-36 h-36 flex flex-col justify-center border-1 border-gray-300"
-            >
-              <Link
-                href="https://github.com/busycaesar/Public_Speaking_Portfolio"
-                target="_blank"
-              >
-                <h3>Public Speaking</h3>
-              </Link>
-            </Col>
+                <Link
+                  href={href}
+                  {...(!internal && { target: "_blank", rel: "noopener noreferrer" })}
+                  style={{ textDecoration: "none" }}
+                >
+                  <h3 style={{ margin: 0 }}>{label}</h3>
+                </Link>
+              </Col>
+            ))}
           </Row>
         </>
       )}

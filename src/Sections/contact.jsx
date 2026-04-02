@@ -8,6 +8,7 @@ export default function Contact() {
     "https://x.com/busycaesar",
     "https://github.com/busycaesar",
     "https://dev.to/busycaesar",
+    "https://medium.com/@busycaesar",
     "https://youtube.com/@busycaesar",
     "https://instagram.com/busycaesar",
   ];
@@ -27,11 +28,21 @@ export default function Contact() {
               lg={3}
               md={4}
               sm={6}
-              className="shadow-2xl rounded-[2em] m-2 md:p-4 p-3 md:!w-48 md:h-48 !w-[9em] !h-[9em] border-1 border-gray-300"
+              style={{
+                background: "#ffffff",
+                borderRadius: "14px",
+                boxShadow: "0 2px 12px rgba(27,42,65,0.07)",
+                borderLeft: "4px solid #1b2a41",
+                padding: "1.25em 1.5em",
+                margin: "0.5em",
+                width: "180px",
+                height: "120px",
+              }}
             >
               <a
                 href={link}
-                className="text-black no-underline"
+                className="no-underline"
+                style={{ color: "inherit", textDecoration: "none" }}
                 target="_blank"
               >
                 <img
@@ -39,9 +50,20 @@ export default function Contact() {
                   alt={`Link to Dev's ${url.hostname}`}
                   className="h-10 w-10 rounded-full"
                 />
-                <div className="md:text-lg sm:text-md text-sm my-3 break-words w-full">
+                <div
+                  style={{
+                    marginTop: "0.6em",
+                    fontSize: "0.9rem",
+                    fontWeight: 600,
+                    color: "#1b2a41",
+                    wordBreak: "break-word",
+                  }}
+                >
                   {url.hostname}
-                  <br />/{username[username.length - 1]}
+                  <br />
+                  <span style={{ fontWeight: 400, color: "#6b7280" }}>
+                    /{username[username.length - 1]}
+                  </span>
                 </div>
               </a>
             </Col>

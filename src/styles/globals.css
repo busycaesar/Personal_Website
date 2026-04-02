@@ -110,6 +110,22 @@ p {
   margin: 1em 0;
 }
 
+@keyframes rsvp-blink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.96);
+  }
+}
+
+.rsvp-badge {
+  animation: rsvp-blink 1.4s ease-in-out infinite;
+}
+
 @media screen and (max-width: 1200px) {
   #profile-photo {
     width: 100px;
