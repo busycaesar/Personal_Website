@@ -7,7 +7,7 @@ export default function TechSkillsSection(props) {
   return (
     <>
       <h2>
-        <strong>{title}:</strong>
+        <strong>{title ? title + ":" : ""}</strong>
       </h2>
       <div className="social-links">
         {techs.map((tech) => (
