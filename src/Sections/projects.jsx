@@ -9,21 +9,20 @@ export default function Projects() {
     ProjectData()
       .then((data) => setProjects(data))
       .catch((error) => console.log(error));
-  });
+  }, []);
   return (
     <div id="projects" className="content-section">
       <h1>
         <strong>PROJECTS</strong>
       </h1>
       {projects.map((project) => (
-        <>
-          <ProjectSection
-            title={project.title}
-            techStack={project.techStack}
-            description={project.description}
-            link={project.link}
-          />
-        </>
+        <ProjectSection
+          key={project.link ?? project.title}
+          title={project.title}
+          techStack={project.techStack}
+          description={project.description}
+          link={project.link}
+        />
       ))}
     </div>
   );

@@ -9,25 +9,25 @@ export default function Education() {
     EducationData()
       .then((data) => setEducation(data))
       .catch((error) => console.log(error));
-  });
+  }, []);
+
   return (
     <div id="education" className="content-section">
       <h1>
         <strong>EDUCATION</strong>
       </h1>
       {education &&
-        education.map((education) => (
-          <>
-            <EduSection
-              program={education.program}
-              progType={education.programType}
-              dateFrom={education.startDate}
-              dateTill={education.endDate}
-              school={education.school}
-              location={education.location}
-              courses={education.courses}
-            />
-          </>
+        education.map((edu) => (
+          <EduSection
+            key={`${edu.school}-${edu.program}-${edu.startDate}`}
+            program={edu.program}
+            progType={edu.programType}
+            dateFrom={edu.startDate}
+            dateTill={edu.endDate}
+            school={edu.school}
+            location={edu.location}
+            courses={edu.courses}
+          />
         ))}
     </div>
   );

@@ -11,7 +11,7 @@ export default function TechSkillsSection(props) {
       </h2>
       <div className="social-links">
         {techs.map((tech) => (
-          <div key={tech} className="tech-logo my-1">
+          <div key={tech.src} className="tech-logo my-1">
             <img
               src={`https://skillicons.dev/icons?i=${tech.src}`}
               alt={tech.name}

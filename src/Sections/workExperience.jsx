@@ -9,25 +9,24 @@ export default function WorkExperience() {
     WorkExperienceData()
       .then((data) => setWorkExperience(data))
       .catch((error) => console.log(error));
-  });
+  }, []);
   return (
     <div id="work-experience" className="content-section">
       <h1>
         <strong>WORK EXPERIENCE</strong>
       </h1>
       {workExperience.map((workExp) => (
-        <>
-          <WorkExpSection
-            companyName={workExp.companyName}
-            location={workExp.location}
-            designation={workExp.designation}
-            empType={workExp.employmentType}
-            dateFrom={workExp.startDate}
-            dateTill={workExp.endDate}
-            responsibilities={workExp.responsibilities}
-            techStack={workExp.techStack}
-          />
-        </>
+        <WorkExpSection
+          key={`${workExp.companyName}-${workExp.startDate}`}
+          companyName={workExp.companyName}
+          location={workExp.location}
+          designation={workExp.designation}
+          empType={workExp.employmentType}
+          dateFrom={workExp.startDate}
+          dateTill={workExp.endDate}
+          responsibilities={workExp.responsibilities}
+          techStack={workExp.techStack}
+        />
       ))}
     </div>
   );
