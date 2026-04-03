@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getEngagements } from "@/Lib";
 import EngagementSection from "@/Components/engagementSection";
+import { Row, Col } from "react-bootstrap";
 
 const sectionLabel = {
   display: "inline-block",
@@ -34,39 +35,31 @@ export default function Speaking() {
 
       {upcoming.length > 0 && (
         <div style={{ marginBottom: "2.5em" }}>
-          <span
-            style={{
-              ...sectionLabel,
-              background: "#d1fae5",
-              color: "#065f46",
-            }}
-          >
+          <span style={{ ...sectionLabel, background: "#d1fae5", color: "#065f46" }}>
             Upcoming
           </span>
-          {upcoming.map((engagement) => (
-            <EngagementSection
-              key={engagement.title}
-              engagement={engagement}
-              upcoming
-            />
-          ))}
+          <Row className="align-items-stretch">
+            {upcoming.map((engagement) => (
+              <Col key={engagement.title} lg={4} md={6} sm={12} className="mb-3 d-flex">
+                <EngagementSection engagement={engagement} upcoming />
+              </Col>
+            ))}
+          </Row>
         </div>
       )}
 
       {past.length > 0 && (
         <div>
-          <span
-            style={{
-              ...sectionLabel,
-              background: "#e5e7eb",
-              color: "#374151",
-            }}
-          >
+          <span style={{ ...sectionLabel, background: "#e5e7eb", color: "#374151" }}>
             Past
           </span>
-          {past.map((engagement) => (
-            <EngagementSection key={engagement.title} engagement={engagement} />
-          ))}
+          <Row className="align-items-stretch">
+            {past.map((engagement) => (
+              <Col key={engagement.title} lg={4} md={6} sm={12} className="mb-3 d-flex">
+                <EngagementSection engagement={engagement} />
+              </Col>
+            ))}
+          </Row>
         </div>
       )}
     </div>

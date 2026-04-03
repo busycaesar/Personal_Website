@@ -41,7 +41,7 @@ export default function About() {
             ></iframe>
             {[
               { label: "Contact", href: "#contact", internal: true },
-              { label: "Blogs", href: "https://dev.to/busycaesar", internal: false },
+              { label: "Blogs", href: "/blogs", internal: true },
               { label: "Tech Videos", href: "https://www.youtube.com/@busycaesar", internal: false },
               { label: "Public Speaking", href: "/speaking", internal: true },
             ].map(({ label, href, internal }) => (
