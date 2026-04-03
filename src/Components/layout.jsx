@@ -13,7 +13,6 @@ export default function Layout(props) {
             "Work Experience",
             "Projects",
             "Education",
-            "Contact",
           ]}
         />
       </Col>

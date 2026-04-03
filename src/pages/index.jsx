@@ -5,7 +5,6 @@ import {
   WorkExperience,
   Projects,
   Education,
-  Contact,
 } from "@/Sections";
 
 export default function Home() {
@@ -20,8 +19,6 @@ export default function Home() {
       <Projects />
       <hr />
       <Education />
-      <hr />
-      <Contact />
       <hr />
       <p className="flex items-center">
         &copy; Developed with 🖤 by Dev!
