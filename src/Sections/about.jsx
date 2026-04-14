@@ -8,12 +8,13 @@ import { Row, Col } from "react-bootstrap";
 const SocialMediaAccounts = [
   "https://linkedin.com/in/busycaesar",
   "https://x.com/busycaesar",
-  "https://bsky.app/profile/busycaesar.bsky.social",
   "https://github.com/busycaesar",
   "https://dev.to/busycaesar",
+  "https://bsky.app/profile/busycaesar.bsky.social",
   "https://medium.com/@busycaesar",
   "https://youtube.com/@busycaesar",
   "https://instagram.com/busycaesar",
+  "https://topmate.io/busycaesar",
 ];
 
 export default function About() {
